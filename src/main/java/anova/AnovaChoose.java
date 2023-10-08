@@ -22,11 +22,11 @@ public class AnovaChoose extends JFrame {
 		this.setResizable(false);
 		this.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Broj mjerenja");
+		JLabel lblNewLabel = new JLabel("Num of measurements");
 		lblNewLabel.setBounds(10, 42, 107, 14);
 		getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Broj alternativa");
+		JLabel lblNewLabel_1 = new JLabel("Num of alternatives");
 		lblNewLabel_1.setBounds(10, 80, 125, 14);
 		getContentPane().add(lblNewLabel_1);
 		
