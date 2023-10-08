@@ -22,7 +22,7 @@ public class Anova {
 	private double T_Table;
 	private double altFieldsSum=0d;
 	private double contrast=0d;
-	private IntervalTuple<Double,Double> intervalPovjerenja;
+	private IntervalTuple<Double,Double> confidenceInterval;
 	public Anova() {
 		super();
 	}
@@ -74,7 +74,7 @@ public class Anova {
 		return varianceSSA;
 	}
 	public IntervalTuple<Double,Double> getInterval(){
-		return intervalPovjerenja;
+		return confidenceInterval;
 	}
 	public void calculateMeanColumnValues(JTextField[][] matrix) {
 		double currSum=0;
@@ -116,23 +116,23 @@ public class Anova {
 	
 	public void calculateFTable() {
 		FDistribution fd=new FDistribution(dfAlternative,dfError);
-		double vjerovatnocaTest = 0.000;
-		double vjerovatnoca=0.95;
-		double korak=0.001;
-		while(vjerovatnoca >= fd.cumulativeProbability(vjerovatnocaTest)) {
-			vjerovatnocaTest += korak;
+		double probabilityTest = 0.000;
+		double probability=0.95;
+		double step=0.001;
+		while(probability >= fd.cumulativeProbability(probabilityTest)) {
+			probabilityTest += step;
 		}
-		F_Table=vjerovatnocaTest;
+		F_Table=probabilityTest;
 	}
 	public void calculateStudentDistribution(double x) {
 		TDistribution fd=new TDistribution(dfAlternative,dfError);
-		double vjerovatnocaTest = 0.000;
-		double vjerovatnoca=0.90;
-		double korak=0.001;
-		while(vjerovatnoca >= fd.cumulativeProbability(vjerovatnocaTest)) {
-			vjerovatnocaTest += korak;
+		double probabilityTest = 0.000;
+		double probability=0.90;
+		double step=0.001;
+		while(probability >= fd.cumulativeProbability(probabilityTest)) {
+			probabilityTest += step;
 		}
-		T_Table=vjerovatnocaTest;
+		T_Table=probabilityTest;
 	}
 	public void calculateContrast(int a1,int a2) {
 		contrast=effect[a1-1]-effect[a2-1];
@@ -150,7 +150,7 @@ public class Anova {
 		double c1=0d,c2=0d;
 		c1=contrast-(T_Table*Sc);
 		c2=contrast+(T_Table*Sc);
-		intervalPovjerenja= new IntervalTuple<Double,Double>(c1,c2);
+		confidenceInterval= new IntervalTuple<Double,Double>(c1,c2);
 		
 	}
 	
