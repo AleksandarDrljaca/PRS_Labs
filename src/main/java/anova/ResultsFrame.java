@@ -16,39 +16,39 @@ public class ResultsFrame extends JFrame{
 		lblNewLabel.setBounds(40, 29, 89, 14);
 		getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Alternative");
+		JLabel lblNewLabel_1 = new JLabel("Alternatives");
 		lblNewLabel_1.setBounds(218, 29, 119, 14);
 		getContentPane().add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Greska");
+		JLabel lblNewLabel_2 = new JLabel("Error");
 		lblNewLabel_2.setBounds(393, 29, 89, 14);
 		getContentPane().add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("Ukupno");
+		JLabel lblNewLabel_3 = new JLabel("Total");
 		lblNewLabel_3.setBounds(522, 29, 89, 14);
 		getContentPane().add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("Suma kvadrata");
+		JLabel lblNewLabel_4 = new JLabel("Quadratic sum");
 		lblNewLabel_4.setBounds(41, 86, 119, 14);
 		getContentPane().add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_5 = new JLabel("Broj stepeni slobode");
+		JLabel lblNewLabel_5 = new JLabel("Degrees of freedom");
 		lblNewLabel_5.setBounds(40, 141, 150, 14);
 		getContentPane().add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("Varijanse");
+		JLabel lblNewLabel_6 = new JLabel("Varijances");
 		lblNewLabel_6.setBounds(53, 197, 76, 14);
 		getContentPane().add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_7 = new JLabel("Izracunata F vrijed");
+		JLabel lblNewLabel_7 = new JLabel("Calculated F value");
 		lblNewLabel_7.setBounds(40, 258, 150, 14);
 		getContentPane().add(lblNewLabel_7);
 		
-		JLabel lblNewLabel_8 = new JLabel("Tabelarna F vrijed");
+		JLabel lblNewLabel_8 = new JLabel("Tabe F value");
 		lblNewLabel_8.setBounds(40, 308, 150, 14);
 		getContentPane().add(lblNewLabel_8);
 		
-		JLabel lblNewLabel_9 = new JLabel("Interval povjerenja za kontrast");
+		JLabel lblNewLabel_9 = new JLabel("Contrast confidence interval");
 		lblNewLabel_9.setBounds(10, 357, 180, 14);
 		getContentPane().add(lblNewLabel_9);
 		
@@ -103,11 +103,11 @@ public class ResultsFrame extends JFrame{
 		sstLabel.setBounds(522, 86, 102, 14);
 		getContentPane().add(sstLabel);
 		
-		JLabel ukupnoBrStepSlLbl = new JLabel();
+		JLabel totalDOFLbl = new JLabel();
 		int x=(a.getK()*a.getN())-1;
-		ukupnoBrStepSlLbl.setText("kn-1 = "+x);
-		ukupnoBrStepSlLbl.setBounds(522, 141, 102, 14);
-		getContentPane().add(ukupnoBrStepSlLbl);
+		totalDOFLbl.setText("kn-1 = "+x);
+		totalDOFLbl.setBounds(522, 141, 102, 14);
+		getContentPane().add(totalDOFLbl);
 		
 	}
 	
