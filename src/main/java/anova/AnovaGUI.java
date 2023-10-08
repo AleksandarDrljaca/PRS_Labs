@@ -54,11 +54,11 @@ public class AnovaGUI extends JFrame {
 		altPanel.setBounds(100, 36, 660, 39);
 		getContentPane().add(altPanel);
 		altPanel.setLayout(new GridLayout(1,1));
-		JLabel label_1 = new JLabel("Mjerenja");
+		JLabel label_1 = new JLabel("Measurements");
 		label_1.setBounds(10, 24, 51, 75);
 		getContentPane().add(label_1);
 		
-		JLabel ukupnaSrVrLabel = new JLabel("<html> Ukupna srednja vrijednost </html>");
+		JLabel ukupnaSrVrLabel = new JLabel("<html> Total mean </html>");
 		ukupnaSrVrLabel.setBounds(795, 54, 63, 45);
 		getContentPane().add(ukupnaSrVrLabel);
 		
@@ -96,15 +96,15 @@ public class AnovaGUI extends JFrame {
 		getContentPane().add(alt2);
 		alt2.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("Racunanje kontrasta");
+		JLabel lblNewLabel = new JLabel("Contrast calculation");
 		lblNewLabel.setBounds(100, 578, 128, 23);
 		getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Alternativa 1");
+		JLabel lblNewLabel_1 = new JLabel("Alternative 1");
 		lblNewLabel_1.setBounds(249, 566, 113, 14);
 		getContentPane().add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Alternativa 2");
+		JLabel lblNewLabel_2 = new JLabel("Alternative 2");
 		lblNewLabel_2.setBounds(249, 597, 113, 14);
 		getContentPane().add(lblNewLabel_2);
 		
